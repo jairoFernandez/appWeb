@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="appWeb/BDComun.cs">
+    <Files>
+      <File FileName="appWeb/Default.aspx" Line="52" Column="2" />
+      <File FileName="appWeb/webservice.asmx.cs" Line="12" Column="3" />
+      <File FileName="appWeb/Default.aspx.cs" Line="14" Column="31" />
+      <File FileName="appWeb/BDComun.cs" Line="18" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="appWeb" expanded="True">
+            <Node name="References" expanded="True" selected="True" />
+            <Node name="webservice.asmx" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/flia/proyectosMono/appWeb/appWeb/Default.aspx" line="78" column="14" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
