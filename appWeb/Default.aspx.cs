@@ -10,8 +10,7 @@ namespace appWeb
 		
 		public void button1Clicked (object sender, EventArgs args)
 		{
-			button1.Text = "You clicked me";
-			label1.Text = "Hola Jairo";
+
 		}
 
 
