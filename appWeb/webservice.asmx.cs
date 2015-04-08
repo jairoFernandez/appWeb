@@ -28,6 +28,8 @@ namespace appWeb
 		                                     double UsuEgresos
 		                                     )
 		{	
+
+
 			Usuario usuario = new Usuario ();
 			usuario.UsuTipoPersona = UsuTipoPersona;
 			usuario.UsuTipoIdentificacion = UsuTipoIdentificacion;

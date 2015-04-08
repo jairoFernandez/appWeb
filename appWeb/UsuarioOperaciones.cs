@@ -9,6 +9,8 @@ namespace appWeb
 		{
 			int retorno = 0;
 
+
+
 			MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO Usuario " +
 				"(UsuTipoPersona, UsuTipoIdentificacion, UsuIdentificacion," +
 				" UsuNombreCompleto, UsuPrimerNombre, UsuSegundoNombre, " +

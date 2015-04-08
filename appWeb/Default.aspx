@@ -327,19 +327,20 @@
 		         var txtTelefono = $('#txtTelefono').val();
 		         var txtIngresos = $('#txtIngresos').val();
 		         var txtEgresos = $('#txtEgresos').val();
+
+				 if($('#activo').val()=="on"){
+				 		 var txtActivo = 1;
+				 }else{
+		         	         var txtActivo = $('#activo').val();
+				 }	
 		         
 				 $.ajax({
 		                    url:  "webservice.asmx/btnInsertarUsuario_Click",
 		                    type: "get",
-		                    data: 'UsuTipoPersona='+tipoPersona+'&UsuTipoIdentificacion='+tipoIdentificacion+'',
+		                    data: 'UsuTipoPersona='+tipoPersona+'&UsuTipoIdentificacion='+tipoIdentificacion+'&UsuIdentificacion='+txtIdentificacion+'&UsuNombreCompleto='+txtNombreCompleto+'&UsuPrimerNombre='+txtprimerNombre+'&UsuSegundoNombre='+txtsegundoNombre+'&UsuPrimerApellido='+txtprimerApellido+'&UsuSegundoApellido='+txtsegundoApellido+'&UsuActivo='+txtActivo+'&UsuCiudad='+txtCiudad+'&UsuDireccion='+txtDireccion+'&UsuTelefono='+txtTelefono+'&UsuIngresos='+txtIngresos+'&UsuEgresos='+txtEgresos+'',
 		                    
 		                    success: function(xml) {
-		                          $(xml).find('Ciudad').each(function(){
-		                          		var idCiudad = $(this).find('CiuId').text();
-								        var nombreCiudad = $(this).find('CiuNombre').text();
-								        $("#txtCiudad").val(idCiudad);
-					                   
-		                          });    
+		                         
 		                    }
 		           });
       
