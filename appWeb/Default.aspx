@@ -49,85 +49,151 @@
  
  <hr/>
  		<div class="row">
-						<div class="col-lg-6">
-						                        <div class="panel panel-default">
-						                            <div class="panel-heading">
-						                                <h3 class="panel-title"><i class="fa fa-users"></i> Registro de nuevos usuarios </h3>
-						                            </div>
-						                            <div class="panel-body">
-						                            
-						                            	<form id="formulario" runat="server">
-						                            			 <div class="col-lg-12">
-																	<div class="form-group">						                            		
-																	    <label for="exampleInputEmail1">Primer Nombre</label>
-																	    <asp:TextBox CssClass="form-control" id="txtprimerNombre" placeholder="Primer nombre" runat="server" ></asp:TextBox>
-																	  </div>
-																	  <div class="form-group">
-																	    <label for="exampleInputPassword1">Segundo Nombre</label>
-																	    <asp:TextBox CssClass="form-control" id="txtsegundoNombre" placeholder="Segundo nombre" runat="server" ></asp:TextBox>
-																	  </div>
-																</div>
-																 <div class="col-lg-12">	  
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Primer Apellido</label>
-																	    <asp:TextBox CssClass="form-control" id="txtprimerApellido" placeholder="Primer Apellido" runat="server" ></asp:TextBox>
-																	  </div>
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Segundo Apellido</label>
-																	    <asp:TextBox CssClass="form-control" id="txtsegundoApellido" placeholder="Segundo Apellido" runat="server" ></asp:TextBox>
-																	  </div>
-																</div>	  
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Nombre Completo</label>
-																	    <asp:TextBox CssClass="form-control" id="txtNombreCompleto" placeholder="Nombre completo" runat="server" ></asp:TextBox>
-																	  </div>
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Estado</label>
-																	    <asp:CheckBox CssClass="form-control" id="activo" placeholder="estado" runat="server"></asp:CheckBox>
-																	  </div>
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Ciudad</label>
-																	    <asp:TextBox CssClass="form-control" id="txtCiudad" placeholder="Ciudad" runat="server" ></asp:TextBox>
-																	  </div>
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Dirección</label>
-																	    <asp:TextBox CssClass="form-control" id="txtDireccion" placeholder="dirección" runat="server" ></asp:TextBox>
-																	  </div>
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Teléfono</label>
-																	    <asp:TextBox CssClass="form-control" id="txtTelefono" placeholder="telefono" runat="server" ></asp:TextBox>
-																	  </div>
-																	   <div class="form-group">
-																	    <label for="exampleInputPassword1">Ingresos</label>
-																	    <asp:TextBox CssClass="form-control" id="txtIngresos" placeholder="ingresos" runat="server" ></asp:TextBox>
-																	  </div>
-																	   
-																	  
-						                            	</form>
-						                           				<button type="button" class="btn btn-primary btn-lg btn-block">Agregar</button>
-						                            
-						                            </div>
-						                            
-						                        </div>
-						                        
-						  </div>
-                           
+						<div class="col-lg-8">
+		                        <div class="panel panel-default">
+		                            <div class="panel-heading">
+		                                <h3 class="panel-title"><i class="fa fa-users"></i> Registro de nuevos usuarios </h3>
+		                            </div>
+		                            <div class="panel-bodys">
+		                            <div class="">
+		                            
+		                            	        <div class="form-group">	  
+													<div class="col-lg-12">											
+													    <label for="tipoPersona">Tipo persona</label>
+													    <select id="tipoPersona" class="form-control">
+											                <option  value="0">Seleccione</option>
+											                <option value="N">Persona Natural</option>
+											                <option value="J">Persona Jurídica</option>
+											            </select>
+													  </div>  
+												</div> 
+		                            			<div class="form-group">						                            		
+													   <div class="col-lg-4">
+													    <label for="tipoDoc">Tipo Documento</label>
+													    <select id="tipoDoc" class="form-control" disabled>
+											              
+											            </select>
+													   
+													</div>
+													<div class="col-lg-8">
+													    <label for="txtIdentificacion">Número de Identificación</label>
+													    <input type="text" class="form-control" id="txtIdentificacion" placeholder="número de documento" />
+													  </div>
+												</div>
+												<div id="bloqueNombresApellidos"  style="display:none">
+												
+												<div class="form-group">
+																	                            		
+													   <div class="col-lg-6"> <label for="txtprimerNombre">Primer Nombre</label>
+													    <input type="text" class="form-control" id="txtprimerNombre" placeholder="Primer nombre" />
+													</div>
+													<div class="col-lg-6">
+													    <label for="txtsegundoNombre">Segundo Nombre</label>
+													    <input type="text" class="form-control" id="txtsegundoNombre" placeholder="Segundo nombre" runat="server" />
+													  </div>
+												</div>
+												 <hr/>
+												<div class="form-group">
+													   <div class="col-lg-6">	  
+															    <label for="txtprimerApellido">Primer Apellido</label>
+															    <input type="text" class="form-control" id="txtprimerApellido" placeholder="Primer Apellido" runat="server" />
+													   </div>
+													   <div class="col-lg-6">	  
+													    		<label for="txtsegundoApellido">Segundo Apellido</label>
+													    		<input type="text" class="form-control" id="txtsegundoApellido" placeholder="Segundo Apellido" />
+													   </div>
+													   <p></p><p></p>
+											    </div>
+											    <hr/>
+											    </div>
+											    <div id="bloqueNombreCompleto" style="display:none">
+												<div class="form-group">
+												
+													    <div class="col-lg-12">
+													    <hr/>
+															    <label for="txtNombreCompleto">Nombre Completo</label>
+															    <input type="text" class="form-control" id="txtNombreCompleto" placeholder="Nombre completo" />
+														<hr/>
+														</div>
+														
+												</div>
+												
+												</div>	 
+												<div class="form-group">
+												       <div class="col-lg-6">
+														   	    <label for="txtCiudad">Buscar</label>
+															    <input type="text" class="form-control" id="buscarCiudad" placeholder="Digita aqui tu ciudad para buscar..." />
+													  </div>
+													   <div class="col-lg-6">
+														   	    <label for="txtCiudad">Ciudad</label>
+															    <select class="form-control" id="txtCiudad" placeholder="Ciudad" />
+													  </div>
+													    <div class="col-lg-12" style="display:none">
+															    <label for="txtDireccion">Dirección</label>
+															    <input type="text" class="form-control" id="txtDireccion" placeholder="dirección"/>
+													  </div>
+												</div>
+												
+													
+												<div class="form-group">
+													  
+													   <div class="col-lg-12">
+															    <label for="txtTelefono">Teléfono</label>
+															    <input type="text" class="form-control" id="txtTelefono" placeholder="telefono" />
+														  
+													  </div>
+												</div>
+												  <div class="form-group">
+												    <div class="col-lg-6">
+															    <label for="txtIngresos">Ingresos</label>
+															    <input type="text" class="form-control" id="txtIngresos" placeholder="ingresos" />
+														  
+													  </div>
+													    <div class="col-lg-6">
+															    <label for="txtEgresos">Egresos</label>
+															    <input type="text" class="form-control" id="txtEgresos" placeholder="Egresos" />
+														  
+													  </div>
+													 
+												</div>
+												<div class="form-group">
+														<div class="col-lg-12">
+															    <label for="activo">Estado</label>
+															    <input type="checkbox" class="form-control" id="activo" placeholder="estado" />
+													   		    <p></p>  
+															    <p></p>
+													   </div>
+													   	
+												</div>
+													   
+													
+		                            	
+		                            	
+		                           				<button type="button" class="btn btn-primary btn-lg btn-block" id="agregarUsuario">Agregar</button>
+		                           		
+		                            </div>
+		                            </div>
+		                            
+		                        </div>
+		                        
+		  </div>
+           
 
-						<div class="col-lg-6">
-						                        <div class="panel panel-default">
-						                            <div class="panel-heading">
-						                                <h3 class="panel-title"><i class="fa fa-bar-chart"></i> Consolidado usuarios </h3>
-						                            </div>
-												    <div class="panel-body">
-						                            
-						                            
-						                            </div>
-						                            
-						                        </div>
-							</div>
-                                                
-   				</div> 
-        </div>
+		<div class="col-lg-4">
+		                        <div class="panel panel-default">
+		                            <div class="panel-heading">
+		                                <h3 class="panel-title"><i class="fa fa-bar-chart"></i> Consolidado usuarios </h3>
+		                            </div>
+								    <div class="panel-body">
+		                            
+		                            
+		                            </div>
+		                            
+		                        </div>
+			</div>
+                                
+</div> 
+</div>
 </div>
 	
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -136,14 +202,153 @@
   <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://tucolegioaldia.esy.es/jquery.numeric.min.js"></script>
 
 <script>
 	$(document).ready(function(){
-		$('#button1').click(function(){
-			$('#label2').text("Hola "+$('#text1').val());
-			
-		});
+	
+		<!--campos con numeros-->
+		$("#txtIdentificacion").numeric();
+		$("#txtEgresos").numeric();
+		$("#txtIngresos").numeric();
+	
+	$('#agregarUsuario').click(function(){
+		$.insertarUsuario();
 	});
+	
+		$.buscarCiudades("%");
+		
+		$('#tipoPersona').change(function(){
+		        console.log("ajaj "+ $('#tipoPersona').val($(this).val()));
+				if($('#tipoPersona').val()=="N"){
+							$('#tipoDoc option[value!="0"]').remove();
+							 <!--cargamos las opciones cuando es Persona Natural-->
+							  $("<option value=''>Seleccione</option>").appendTo("#tipoDoc");
+							  $("<option value='CC'>Cédula de ciudadanía</option>").appendTo("#tipoDoc");
+							  $("<option value='CE'>Cédula de extranjería</option>").appendTo("#tipoDoc");
+							  $("<option value='TI'>Tarjeta de Identidad</option>").appendTo("#tipoDoc");
+							 <!--Habilitamos los campos-->
+							 $("#tipoDoc").prop('disabled', false);
+							 $("#bloqueNombresApellidos").show('slide');
+							 $("#bloqueNombreCompleto").hide('slide');
+				}else if($('#tipoPersona').val()=="J"){
+				
+				 			 $('#tipoDoc option[value!="0"]').remove();
+							 <!--cargamos las opciones cuando es Persona Natural-->
+				 		     $("<option value='NIT'>NIT</option>").appendTo("#tipoDoc");
+							 <!--Habilitamos el campo-->
+							 $("#tipoDoc").prop('disabled', false);
+							 $("#bloqueNombresApellidos").hide('slide');
+							 $("#bloqueNombreCompleto").show('slide');
+							 
+				 		     
+				}
+		});
+		
+		$('#buscarCiudad').keyup(function(){
+			if($('#buscarCiudad').val()==""){
+			   
+			}else{
+				$.ubicarCiudad($('#buscarCiudad').val());
+			}
+		});
+		
+		
+	});
+	
+	$.buscarCiudades= function(textoBusqueda){
+		  
+				$('#tipoDoc option[value!="0"]').remove();
+		                            
+		                                                                                      
+				 $.ajax({
+		                    url:  "webservice.asmx/consultaCiudades",
+		                    type: "get",
+		                    data: 'CiuNombre='+ textoBusqueda + '',
+		                    dataType: "xml",
+		                    success: function(xml) {
+		                          $(xml).find('Ciudad').each(function(){
+		                          		var idCiudad = $(this).find('CiuId').text();
+								        var nombreCiudad = $(this).find('CiuNombre').text();
+								        
+					                    $("<option value='"+idCiudad+"'>"+nombreCiudad+"</option>").appendTo("#txtCiudad");
+		                          });    
+		                    }
+		           });
+      
+	
+	};
+	
+	
+	
+	$.ubicarCiudad= function(textoBusqueda){
+		  
+				$('#tipoDoc option[value!="0"]').remove();
+		                            
+		                                                                                      
+				 $.ajax({
+		                    url:  "webservice.asmx/consultaCiudades",
+		                    type: "get",
+		                    data: 'CiuNombre='+ textoBusqueda + '',
+		                    dataType: "xml",
+		                    success: function(xml) {
+		                          $(xml).find('Ciudad').each(function(){
+		                          		var idCiudad = $(this).find('CiuId').text();
+								        var nombreCiudad = $(this).find('CiuNombre').text();
+								        $("#txtCiudad").val(idCiudad);
+					                   
+		                          });    
+		                    }
+		           });
+      
+	
+	};
+	
+	$.validarNumeroDocumento = function(){
+		var longitud = $('#txtIdentificacion').length();
+		if(longitud > 15){
+			alert("el campo debe tener máximo 15 caracteres");
+		}
+	}
+	
+	
+	$.insertarUsuario= function(){
+		      	 
+		      	 var tipoPersona = $('#tipoPersona').val();
+		      	 var tipoIdentificacion = $('#tipoDoc').val();
+		      	 var txtIdentificacion = $('#txtIdentificacion').val();
+		      	 var txtprimerNombre = $('#txtprimerNombre').val();
+		         var txtsegundoNombre = $('#txtsegundoNombre').val();                                                                             
+		         var txtprimerApellido = $('#txtprimerApellido').val();
+		         var txtsegundoApellido = $('#txtsegundoApellido').val();                                                                           
+		         var txtNombreCompleto = $('#txtNombreCompleto').val();
+		         var txtCiudad = $('#txtCiudad').val();
+		         var txtDireccion = $('#txtDireccion').val();
+		         var txtTelefono = $('#txtTelefono').val();
+		         var txtIngresos = $('#txtIngresos').val();
+		         var txtEgresos = $('#txtEgresos').val();
+		         
+				 $.ajax({
+		                    url:  "webservice.asmx/btnInsertarUsuario_Click",
+		                    type: "get",
+		                    data: 'UsuTipoPersona='+tipoPersona+'&UsuTipoIdentificacion='+tipoIdentificacion+'',
+		                    
+		                    success: function(xml) {
+		                          $(xml).find('Ciudad').each(function(){
+		                          		var idCiudad = $(this).find('CiuId').text();
+								        var nombreCiudad = $(this).find('CiuNombre').text();
+								        $("#txtCiudad").val(idCiudad);
+					                   
+		                          });    
+		                    }
+		           });
+      
+	
+	};
+	
+	
+	
+	
 </script>
 
 </body>

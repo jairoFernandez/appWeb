@@ -13,26 +13,8 @@ namespace appWeb {
 	
 	public partial class Default {
 		
-		protected System.Web.UI.HtmlControls.HtmlForm formulario;
+		protected System.Web.UI.HtmlControls.HtmlInputText txtsegundoNombre;
 		
-		protected System.Web.UI.WebControls.TextBox txtprimerNombre;
-		
-		protected System.Web.UI.WebControls.TextBox txtsegundoNombre;
-		
-		protected System.Web.UI.WebControls.TextBox txtprimerApellido;
-		
-		protected System.Web.UI.WebControls.TextBox txtsegundoApellido;
-		
-		protected System.Web.UI.WebControls.TextBox txtNombreCompleto;
-		
-		protected System.Web.UI.WebControls.CheckBox activo;
-		
-		protected System.Web.UI.WebControls.TextBox txtCiudad;
-		
-		protected System.Web.UI.WebControls.TextBox txtDireccion;
-		
-		protected System.Web.UI.WebControls.TextBox txtTelefono;
-		
-		protected System.Web.UI.WebControls.TextBox txtIngresos;
+		protected System.Web.UI.HtmlControls.HtmlInputText txtprimerApellido;
 	}
 }

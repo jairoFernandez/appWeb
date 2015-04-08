@@ -17,6 +17,7 @@ namespace appWeb
 		public string UsuDireccion { get; set; }
 		public string UsuTelefono { get; set; }
 		public double UsuIngresos { get; set; }
+		public double UsuEgresos { get; set; }
 
 
 
@@ -25,7 +26,7 @@ namespace appWeb
 		public Usuario(string pUsuTipoPersona, string pUsuTipoIdentificacion, 
 		               string pUsuIdentificacion,string pUsuNombreCompleto,string pUsuPrimerNombre,string pUsuSegundoNombre,
 		               string pUsuPrimerApellido,string pUsuSegundoApellido,int pUsuActivo, int pUsuCiudad, string pUsuDireccion,
-		               string pUsuTelefono,double pUsuIngresos
+		               string pUsuTelefono,double pUsuIngresos,double pUsuEgresos
 		               )
 
 		{
@@ -43,6 +44,7 @@ namespace appWeb
 			this.UsuDireccion = pUsuDireccion;
 			this.UsuTelefono = pUsuTelefono;
 			this.UsuIngresos = pUsuIngresos;
+			this.UsuEgresos = pUsuEgresos;
 		}
 
 	}

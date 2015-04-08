@@ -4,6 +4,7 @@ namespace appWeb
 	using System;
 	using System.Web;
 	using System.Web.Services;
+	using System.Collections.Generic;
 
 	public class webservice : System.Web.Services.WebService
 	{
@@ -23,7 +24,8 @@ namespace appWeb
 		                                     int UsuCiudad,
 		                                     String UsuDireccion, 
 		                                     String UsuTelefono, 
-		                                     double UsuIngresos
+		                                     double UsuIngresos,
+		                                     double UsuEgresos
 		                                     )
 		{	
 			Usuario usuario = new Usuario ();
@@ -40,6 +42,7 @@ namespace appWeb
 			usuario.UsuDireccion = UsuDireccion;
 			usuario.UsuTelefono = UsuTelefono;
 			usuario.UsuIngresos = UsuIngresos;
+			usuario.UsuEgresos = UsuEgresos;
 			
 
 			int resultado = UsuarioOperaciones.Agregar (usuario);
@@ -72,6 +75,13 @@ namespace appWeb
 			{
 				//MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
+		}
+
+		[WebMethod]
+		public List<Ciudad> consultaCiudades(string CiuNombre)
+		{
+			List<Ciudad> resultado = CiudadOperaciones.consultarCiudad (CiuNombre);
+			return resultado;
 		}
 
 

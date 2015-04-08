@@ -75,4 +75,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Default.aspx" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\" />
+  </ItemGroup>
 </Project>
