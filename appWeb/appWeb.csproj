@@ -42,7 +42,8 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="web.config" />
-    <Content Include="webservice.asmx" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="webservices\webservice.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -54,14 +55,14 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="webservice.asmx.cs">
+    <Compile Include="Entidades\Ciudad.cs" />
+    <Compile Include="Entidades\CiudadOperaciones.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\UsuarioOperaciones.cs" />
+    <Compile Include="conexiones\BDComun.cs" />
+    <Compile Include="webservices\webservice.asmx.cs">
       <DependentUpon>webservice.asmx</DependentUpon>
     </Compile>
-    <Compile Include="BDComun.cs" />
-    <Compile Include="Usuario.cs" />
-    <Compile Include="UsuarioOperaciones.cs" />
-    <Compile Include="Ciudad.cs" />
-    <Compile Include="CiudadOperaciones.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -76,6 +77,9 @@
     <EmbeddedResource Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="js\" />
+    <Folder Include="Entidades\" />
+    <Folder Include="conexiones\" />
+    <Folder Include="assets\" />
+    <Folder Include="webservices\" />
   </ItemGroup>
 </Project>

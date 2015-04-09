@@ -16,7 +16,7 @@ namespace appWeb
 				" UsuNombreCompleto, UsuPrimerNombre, UsuSegundoNombre, " +
 				" UsuPrimerApellido, UsuSegundoApellido, UsuActivo, " +
 				" UsuCiudad, UsuDireccion, UsuTelefono, UsuIngresos, UsuEgresos) " +
-			    " values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}',{'13'})",
+			    " values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')",
 			pUsuario.UsuTipoPersona, pUsuario.UsuTipoIdentificacion,pUsuario.UsuIdentificacion,pUsuario.UsuNombreCompleto,
 			pUsuario.UsuPrimerNombre,pUsuario.UsuSegundoNombre,pUsuario.UsuPrimerApellido,
 			pUsuario.UsuSegundoApellido,pUsuario.UsuActivo,pUsuario.UsuCiudad,pUsuario.UsuDireccion,
