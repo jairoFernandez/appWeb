@@ -45,6 +45,7 @@
     <Content Include="assets\js\script.js" />
     <Content Include="webservices\webservice.asmx" />
     <Content Include="Usuarios.html" />
+    <Content Include="assets\js\usuarios.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">

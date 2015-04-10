@@ -160,6 +160,7 @@ $(document).ready(function(){
 	};
 	
 	
+	
 	<!--- validadores -->
 	
 	$.validador = function(){

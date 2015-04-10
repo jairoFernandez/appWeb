@@ -86,6 +86,13 @@ namespace appWeb
 			return resultado;
 		}
 
+		[WebMethod]
+		public List<Usuario> consultaUsuarios()
+		{
+			List<Usuario> resultado = UsuarioOperaciones.consultarUsuarios ();
+			return resultado;
+		}
+
 
 	}
 }

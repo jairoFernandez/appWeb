@@ -54,7 +54,7 @@
 		                            <div class="panel-heading">
 		                                <h3 class="panel-title"><i class="fa fa-users"></i> Registro de nuevos usuarios </h3>
 		                            </div>
-		                            <div class="panel-bodys">
+		                            <div class="panel-body">
 		                            <div id="formulario">
 		                            
 		                            	        <div class="form-group">	  

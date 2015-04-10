@@ -30,7 +30,7 @@ namespace appWeb
 		{
 
 			List<Usuario> usuarios = new List<Usuario>();
-			MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM Usuario", BDComun.ObtenerConexion());
+			MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM Usuario"), BDComun.ObtenerConexion());
 			MySqlDataReader resultado  = comando.ExecuteReader();
 
 			while (resultado.Read()) 
