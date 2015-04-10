@@ -4,6 +4,7 @@ namespace appWeb
 {
 	public class Usuario
 	{
+		public int UsuId { get; set; }
 		public string UsuTipoPersona { get; set; }
 		public string UsuTipoIdentificacion{ get; set; }
 		public string UsuIdentificacion { get; set; }
@@ -23,7 +24,7 @@ namespace appWeb
 
 		public Usuario() { }
 
-		public Usuario(string pUsuTipoPersona, string pUsuTipoIdentificacion, 
+		public Usuario(int pUsuId,string pUsuTipoPersona, string pUsuTipoIdentificacion, 
 		               string pUsuIdentificacion,string pUsuNombreCompleto,string pUsuPrimerNombre,string pUsuSegundoNombre,
 		               string pUsuPrimerApellido,string pUsuSegundoApellido,int pUsuActivo, int pUsuCiudad, string pUsuDireccion,
 		               string pUsuTelefono,double pUsuIngresos,double pUsuEgresos
@@ -31,6 +32,7 @@ namespace appWeb
 
 		{
 
+			this.UsuId = pUsuId;
 			this.UsuTipoPersona = pUsuTipoPersona;
 			this.UsuTipoIdentificacion = pUsuTipoIdentificacion;
 			this.UsuIdentificacion = pUsuIdentificacion;

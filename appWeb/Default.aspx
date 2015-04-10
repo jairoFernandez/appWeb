@@ -33,7 +33,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="Default.aspx">Registro</a></li>
-            <li><a href="#about">Usuario</a></li>
+            <li><a href="Usuarios.html">Usuario</a></li>
             <li><a href="#contact">Ciudad</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -55,7 +55,7 @@
 		                                <h3 class="panel-title"><i class="fa fa-users"></i> Registro de nuevos usuarios </h3>
 		                            </div>
 		                            <div class="panel-bodys">
-		                            <div class="">
+		                            <div id="formulario">
 		                            
 		                            	        <div class="form-group">	  
 													<div class="col-lg-12">											
@@ -77,7 +77,7 @@
 													</div>
 													<div class="col-lg-8">
 													    <label for="txtIdentificacion">Número de Identificación</label>
-													    <input type="text" class="form-control" id="txtIdentificacion" placeholder="número de documento" />
+													    <input type="number" class="form-control" id="txtIdentificacion" placeholder="número de documento" min="0" />
 													  </div>
 												</div>
 												<div id="bloqueNombresApellidos"  style="display:none">
@@ -145,30 +145,27 @@
 												</div>
 												  <div class="form-group">
 												    <div class="col-lg-6">
-															    <label for="txtIngresos">Ingresos</label>
-															    <input type="text" class="form-control" id="txtIngresos" placeholder="ingresos" />
-														  
+												    <label for="txtIngresos">Ingresos</label>
+												    			<div class="input-group">
+												    			 
+																				  <span class="input-group-addon">$</span>
+																				  <input type="number" class="form-control" id="txtIngresos" min="0"/>
+																</div>			   
 													  </div>
 													    <div class="col-lg-6">
 															    <label for="txtEgresos">Egresos</label>
-															    <input type="text" class="form-control" id="txtEgresos" placeholder="Egresos" />
+												    			<div class="input-group">
+												    			 
+																				  <span class="input-group-addon">$</span>
+																				  <input type="number" class="form-control"  id="txtEgresos" min="0" />
+																</div>		
+															    <p></p>  
+															    <p></p>
 														  
 													  </div>
 													 
 												</div>
-												<div class="form-group">
-														<div class="col-lg-12">
-															    <label for="activo">Estado</label>
-															    <input type="checkbox" class="form-control" id="activo" placeholder="estado" />
-													   		    <p></p>  
-															    <p></p>
-													   </div>
-													   	
-												</div>
-													   
-													
-		                            	
-		                            	
+														                            	
 		                           				<button type="button" class="btn btn-primary btn-lg btn-block" id="agregarUsuario">Agregar</button>
 		                           		
 		                            </div>
@@ -196,13 +193,13 @@
 </div>
 </div>
 	
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- Latest compiled and minified JavaScript -->
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="http://tucolegioaldia.esy.es/jquery.numeric.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script src="http://mciradio.esy.es/notify.min.js"></script>
 <script src="/assets/js/script.js"></script>
 
 
