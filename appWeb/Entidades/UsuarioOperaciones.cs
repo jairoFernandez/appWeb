@@ -37,14 +37,14 @@ namespace appWeb
 			{
 				Usuario pUsuario = new Usuario ();
 				pUsuario.UsuId = resultado.GetInt32 (0);
-				pUsuario.UsuIdentificacion = resultado.GetString (1);
-				pUsuario.UsuNombreCompleto = resultado.GetString (2);
-				pUsuario.UsuActivo = resultado.GetInt32 (3);
-				pUsuario.UsuCiudad = resultado.GetInt32 (4);
-				pUsuario.UsuDireccion = resultado.GetString (5);
-				pUsuario.UsuTelefono = resultado.GetString (6);
-				pUsuario.UsuIngreso = resultado.GetDouble (7);
-				pUsuario.UsuEgreso = resultado.GetDouble (8);
+				pUsuario.UsuIdentificacion = resultado.GetString (3);
+				pUsuario.UsuNombreCompleto = resultado.GetString (4);
+				pUsuario.UsuActivo = resultado.GetInt32 (9);
+				pUsuario.UsuCiudad = resultado.GetInt32 (10);
+				pUsuario.UsuDireccion = resultado.GetString (11);
+				pUsuario.UsuTelefono = resultado.GetString (12);
+				pUsuario.UsuIngresos = resultado.GetDouble (13);
+				pUsuario.UsuEgresos = resultado.GetDouble (14);
 
 				usuarios.Add (pUsuario);
 			}
