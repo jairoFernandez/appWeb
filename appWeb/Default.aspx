@@ -33,7 +33,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="Default.aspx">Registro</a></li>
-            <li><a href="Usuarios.html">Usuario</a></li>
+            <li><a href="Usuarios.html">Usuarios</a></li>
             <li><a href="#contact">Ciudad</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -122,7 +122,7 @@
 												<div class="form-group">
 												       <div class="col-lg-6">
 														   	    <label for="txtCiudad">Buscar</label>
-															    <input type="text" class="form-control" id="buscarCiudad" placeholder="Digita aqui tu ciudad para buscar..." />
+															    <input type="search" class="form-control" id="buscarCiudad" placeholder="Digita aqui tu ciudad para buscar..." />
 													  </div>
 													   <div class="col-lg-6">
 														   	    <label for="txtCiudad">Ciudad</label>

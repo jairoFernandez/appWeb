@@ -24,16 +24,14 @@ $(document).ready(function(){
 	
 	  if($.validador() == 0){
 		      if(confirm('¿Estas Seguro de insertar el registro?'))
-						{
-							$.insertarUsuario();
-						}
-						else
-						{
-							return false;
-						}	
-		      }else{	
-		         console.log("el validador ha encontrado algunos errores");
-		      }		
+			  {
+				$.insertarUsuario();
+			  }else{
+				return false;
+			  }	
+      }else{	
+         console.log("el validador ha encontrado algunos errores");
+      }		
 	}
 	
 	
@@ -126,10 +124,7 @@ $(document).ready(function(){
 	
 	$.insertarUsuario= function(){
 		      
-		      
-		      	 	 
-		      	 	 	 	 
-		      	 var tipoPersona = $('#tipoPersona').val();
+		     	 var tipoPersona = $('#tipoPersona').val();
 		      	 var tipoIdentificacion = $('#tipoDoc').val();
 		      	 var txtIdentificacion = $('#txtIdentificacion').val();
 		      	 var txtprimerNombre = $('#txtprimerNombre').val();
@@ -169,31 +164,16 @@ $(document).ready(function(){
 	
 	$.validador = function(){
 		var errores = 0;
+		errores = parseInt($.validarTipoPersona()) + parseInt($.validarTipoDocumento()) + parseInt($.validarNumeroDocumento()) + parseInt($.validarCiudad()) + parseInt($.validarDireccion()) + parseInt($.validarIngresos()) + parseInt($.validarEgresos());
 		
 		if($('#tipoPersona').val()=="N"){
-			errores = parseInt($.validarTipoPersona()) + parseInt($.validarTipoDocumento()) + parseInt($.validarNumeroDocumento()) + parseInt($.validarPrimerNombre()) + parseInt($.validarSegundoNombre()) + parseInt($.validarPrimerApellido()) + parseInt($.validarSegundoApellido()) + parseInt($.validarCiudad() + parseInt($.validarDireccion()) + parseInt($.validarIngresos()) + parseInt($.validarEgresos()));
+			errores = errores + parseInt($.validarPrimerNombre()) + parseInt($.validarSegundoNombre()) + parseInt($.validarPrimerApellido()) + parseInt($.validarSegundoApellido());
+		    console.log("error si N "+errores);
 		}else if($('#tipoPersona').val()=="J"){
-			errores = parseInt($.validarTipoPersona()) + parseInt($.validarTipoDocumento()) + parseInt($.validarNumeroDocumento()) + parseInt($.validarNombreCompleto()) + parseInt($.validarCiudad() + parseInt($.validarDireccion()) + parseInt($.validarIngresos()) + parseInt($.validarEgresos()));
+			errores = errores + parseInt($.validarNombreCompleto());
+		    console.log("error si J "+errores);
 		}
 		
-		
-		console.log("total de errores "+errores);
-		console.log("errores tipo persona: "+$.validarTipoPersona());
-		console.log("errores tipo doc: "+$.validarTipoDocumento());
-		
-		
-		console.log("errores primer nombre: "+$.validarPrimerNombre());
-		console.log("errores segundo nombre: "+$.validarSegundoNombre());
-		console.log("errores primer apellido: "+$.validarPrimerApellido());
-		console.log("errores segundo apellido: "+$.validarSegundoApellido());
-		
-		console.log("errores nombre completo: "+$.validarNombreCompleto());
-		
-		console.log("errores ciudad: "+$.validarCiudad());
-		console.log("errores direccion: "+$.validarDireccion());
-		console.log("errores Telefonno: "+$.validarTelefono());
-		console.log("errores Ingresos: "+$.validarIngresos());
-		console.log("errores Egresos: "+$.validarEgresos());
 		return errores;
 	}
 	
