@@ -169,15 +169,26 @@ $(document).ready(function(){
 	
 	$.validador = function(){
 		var errores = 0;
-		errores = parseInt($.validarTipoPersona()) + parseInt($.validarTipoDocumento()) + parseInt($.validarNumeroDocumento()) + parseInt($.validarPrimerNombre()) + parseInt($.validarSegundoNombre()) + parseInt($.validarPrimerApellido()) + parseInt($.validarSegundoApellido()) + parseInt($.validarNombreCompleto()) + parseInt($.validarCiudad() + parseInt($.validarDireccion()) + parseInt($.validarIngresos()) + parseInt($.validarEgresos()));
+		
+		if($('#tipoPersona').val()=="N"){
+			errores = parseInt($.validarTipoPersona()) + parseInt($.validarTipoDocumento()) + parseInt($.validarNumeroDocumento()) + parseInt($.validarPrimerNombre()) + parseInt($.validarSegundoNombre()) + parseInt($.validarPrimerApellido()) + parseInt($.validarSegundoApellido()) + parseInt($.validarCiudad() + parseInt($.validarDireccion()) + parseInt($.validarIngresos()) + parseInt($.validarEgresos()));
+		}else if($('#tipoPersona').val()=="J"){
+			errores = parseInt($.validarTipoPersona()) + parseInt($.validarTipoDocumento()) + parseInt($.validarNumeroDocumento()) + parseInt($.validarNombreCompleto()) + parseInt($.validarCiudad() + parseInt($.validarDireccion()) + parseInt($.validarIngresos()) + parseInt($.validarEgresos()));
+		}
+		
+		
 		console.log("total de errores "+errores);
-		console.log("errores tipo persona: "+$.validarPrimerNombre());
+		console.log("errores tipo persona: "+$.validarTipoPersona());
 		console.log("errores tipo doc: "+$.validarTipoDocumento());
+		
+		
 		console.log("errores primer nombre: "+$.validarPrimerNombre());
 		console.log("errores segundo nombre: "+$.validarSegundoNombre());
 		console.log("errores primer apellido: "+$.validarPrimerApellido());
 		console.log("errores segundo apellido: "+$.validarSegundoApellido());
+		
 		console.log("errores nombre completo: "+$.validarNombreCompleto());
+		
 		console.log("errores ciudad: "+$.validarCiudad());
 		console.log("errores direccion: "+$.validarDireccion());
 		console.log("errores Telefonno: "+$.validarTelefono());
