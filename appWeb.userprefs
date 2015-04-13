@@ -2,8 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="appWeb/Entidades/UsuarioOperaciones.cs">
     <Files>
-      <File FileName="appWeb/Entidades/UsuarioOperaciones.cs" Line="47" Column="24" />
-      <File FileName="appWeb/Entidades/Usuario.cs" Line="10" Column="18" />
+      <File FileName="appWeb/webservices/webservice.asmx.cs" Line="19" Column="53" />
+      <File FileName="appWeb/Usuarios.html" Line="89" Column="11" />
+      <File FileName="appWeb/assets/js/script.js" Line="162" Column="2" />
+      <File FileName="appWeb/assets/js/usuarios.js" Line="18" Column="45" />
+      <File FileName="appWeb/Default.aspx" Line="57" Column="53" />
+      <File FileName="appWeb/Entidades/UsuarioOperaciones.cs" Line="40" Column="51" />
+      <File FileName="appWeb/Entidades/Usuario.cs" Line="27" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,6 +19,9 @@
             </Node>
             <Node name="Entidades" expanded="True">
               <Node name="UsuarioOperaciones.cs" selected="True" />
+            </Node>
+            <Node name="webservices" expanded="True">
+              <Node name="webservice.asmx" expanded="True" />
             </Node>
           </Node>
         </State>
