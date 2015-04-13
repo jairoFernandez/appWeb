@@ -93,6 +93,13 @@ namespace appWeb
 			return resultado;
 		}
 
+		[WebMethod]
+		public List<Usuario> consultarUsuariosRepetidos()
+		{
+			List<Usuario> resultado = UsuarioOperaciones.consultarRepetidos ();
+			return resultado;
+		}
+
 
 	}
 }

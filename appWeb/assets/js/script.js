@@ -1,5 +1,7 @@
 $(document).ready(function(){
 		
+		tabla = $('#tablaUsuarios').DataTable();
+		$.buscarRepetidos();
 		
 		<!-- tratamos el caso de enter -->
 		$("input").keypress(function(e) {
@@ -406,3 +408,27 @@ $(document).ready(function(){
 		return errores;
 	}
 	
+	
+	
+	
+	$.buscarRepetidos = function(){
+	 $.ajax({
+		                    url:  "webservices/webservice.asmx/consultarUsuariosRepetidos",
+		                    type: "get",
+		                    dataType: "xml",
+		                    success: function(xml) {
+		                          $(xml).find('Usuario').each(function(){
+		                          		var UsuId = $(this).find('UsuId').text();
+		                       
+		                          		var UsuNombreCompleto = $(this).find('UsuNombreCompleto').text();
+		                          	    
+		                          	      tabla.row.add([
+								        	UsuNombreCompleto,
+								        	UsuId
+								        ]).draw();
+								        
+								       
+		                          });    
+		                    }
+		           });
+}

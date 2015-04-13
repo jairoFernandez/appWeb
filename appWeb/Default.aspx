@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
  <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet" />
+ <link href="http://cdn.datatables.net/1.10.6/css/jquery.dataTables.min.css" rel="stylesheet" />
 <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
 </head>
 <body>
@@ -183,7 +184,29 @@
 		                            </div>
 								    <div class="panel-body">
 		                            
-		                            
+		                            <table class="display" id="tablaUsuarios"  width="80%">
+												  <thead>
+											            <tr>
+											                <th>Nombre Completo</th>
+											                <th>Registros</th>
+											               
+											            </tr>
+											        </thead>
+											 
+											        <tfoot>
+											            <tr>
+											                <th>Nombre Completo</th>
+											                <th>Registros</th>
+											               
+											            </tr>
+											        </tfoot>
+											 
+											        <tbody>
+											         
+											           
+											           
+											        </tbody>
+		                            	</table>
 		                            </div>
 		                            
 		                        </div>
@@ -200,6 +223,7 @@
 <script src="http://tucolegioaldia.esy.es/jquery.numeric.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 <script src="http://mciradio.esy.es/notify.min.js"></script>
+<script src="http://cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
 <script src="/assets/js/script.js"></script>
 
 

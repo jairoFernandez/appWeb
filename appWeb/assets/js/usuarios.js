@@ -1,8 +1,10 @@
 $(document).ready(function(){
-
-	$('#tablaUsuarios').DataTable();
 	$.buscarUsuarios();
+	
+	tabla = $('#tablaUsuarios').DataTable();
+	
 });
+
 
 $.buscarUsuarios= function(){
 		  
@@ -26,13 +28,29 @@ $.buscarUsuarios= function(){
 		                          		var UsuEgresos = $(this).find('UsuEgresos').text();
 		                          		var UsuBalance = $(this).find('UsuBalance').text();
 		                          		var UsuCiudadNombre = $(this).find('UsuNombreCiudad').text();
-								       $("<tr><td>"+UsuTipoPersona+"</td><td>"+UsuTipoIdentificacion+"</td><td>"+UsuNombreCompleto+"</td><td>"+UsuActivo+"</td><td>"+UsuCiudadNombre+"</td><td>"+UsuTelefono+"</td><td>" +UsuIngresos+"</td><td>" +UsuEgresos+"</td><td>" +UsuBalance+"</td></tr>").appendTo("#resultados");
 								        
+								        var UsuActivoMensaje = "";
+								        if(UsuActivo==true){
+								        		UsuActivoMensaje = "Sí";
+								        	}else{
+								        		UsuActivoMensaje = "No";
+								        	}
+								        
+								        tabla.row.add([
+								        	UsuTipoPersona,
+								        	UsuTipoIdentificacion,
+								        	UsuNombreCompleto,
+								        	UsuActivoMensaje,
+								        	UsuCiudadNombre,
+								        	UsuTelefono,
+								        	UsuIngresos,
+								        	UsuEgresos,
+								        	UsuBalance
+								        ]).draw();
 								        
 								       
 		                          });    
 		                    }
 		           });
       
-	
 	};

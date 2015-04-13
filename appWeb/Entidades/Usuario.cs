@@ -22,8 +22,6 @@ namespace appWeb
 		public double UsuBalance { get; set; }
 		public string UsuNombreCiudad { get; set; }
 
-
-
 		public Usuario() { }
 
 		public Usuario(int pUsuId,string pUsuTipoPersona, string pUsuTipoIdentificacion, 

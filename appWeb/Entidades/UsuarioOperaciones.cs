@@ -55,7 +55,26 @@ namespace appWeb
 			return usuarios;
 		}
 
+		public static List<Usuario> consultarRepetidos()
+		{
+			List<Usuario> lstusuarios = new List<Usuario>();
+			MySqlCommand comando = new MySqlCommand(string.Format("SELECT Usuario.UsuNombreCompleto,Count(Usuario.UsuId) AS Registros FROM Usuario GROUP BY Usuario.UsuNombreCompleto"), BDComun.ObtenerConexion());
+			MySqlDataReader resultado  = comando.ExecuteReader();
+
+			while (resultado.Read()) 
+			{
+				Usuario lUsuario = new Usuario ();
+
+				lUsuario.UsuNombreCompleto = resultado.GetString (0);
+				lUsuario.UsuId = resultado.GetInt32 (1);
+				lstusuarios.Add (lUsuario);
+			}
+
+			return lstusuarios;
+		}
 
 	}
+
+		
 }
 
