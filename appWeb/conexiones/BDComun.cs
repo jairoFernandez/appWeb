@@ -9,10 +9,9 @@ namespace appWeb
 	{
 		public static MySqlConnection ObtenerConexion()
 		{
-			MySqlConnection conectar = new MySqlConnection("server=127.0.0.1; database=monocinco; Uid=root; pwd=natika123;");
-
-			conectar.Open();
-			return conectar;        
+		MySqlConnection conectar = new MySqlConnection( "server=127.0.0.1; database=monocinco; Uid=root; pwd=natika123;" );
+		conectar.Open();
+		return conectar;        
 		}
 	
 

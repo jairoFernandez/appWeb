@@ -62,28 +62,26 @@ namespace appWeb
 		[WebMethod]
 		public void btnInsertarCiudad_Click(String CiuNombre,int CiuActiva)
 		{	
-			Ciudad ciudad = new Ciudad();
-			ciudad.CiuNombre= CiuNombre;
-			ciudad.CiuActiva = CiuActiva;
-		
-
-
-			int resultado = CiudadOperaciones.Agregar (ciudad);
-			if(resultado  > 0 )
-			{
-				//MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			}
-			else
-			{
-				//MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-			}
+		Ciudad ciudad = new Ciudad();
+		ciudad.CiuNombre= CiuNombre;
+		ciudad.CiuActiva = CiuActiva;
+	
+		int resultado = CiudadOperaciones.Agregar (ciudad);
+		if(resultado  > 0 )
+		{
+			//MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+		else
+		{
+			//MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+		}
 		}
 
 		[WebMethod]
-		public List<Ciudad> consultaCiudades(string CiuNombre)
+		public List<Ciudad> consultaCiudades( string CiuNombre )
 		{
-			List<Ciudad> resultado = CiudadOperaciones.consultarCiudad (CiuNombre);
-			return resultado;
+		List<Ciudad> resultado = CiudadOperaciones.consultarCiudad (CiuNombre);
+		return resultado;
 		}
 
 		[WebMethod]
@@ -96,8 +94,8 @@ namespace appWeb
 		[WebMethod]
 		public List<Usuario> consultarUsuariosRepetidos()
 		{
-			List<Usuario> resultado = UsuarioOperaciones.consultarRepetidos ();
-			return resultado;
+		List<Usuario> resultado = UsuarioOperaciones.consultarRepetidos ();
+		return resultado;
 		}
 
 

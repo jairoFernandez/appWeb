@@ -1,15 +1,6 @@
 ﻿<Properties GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="appWeb/Entidades/UsuarioOperaciones.cs">
-    <Files>
-      <File FileName="appWeb/webservices/webservice.asmx.cs" Line="19" Column="53" />
-      <File FileName="appWeb/Usuarios.html" Line="89" Column="11" />
-      <File FileName="appWeb/assets/js/script.js" Line="162" Column="2" />
-      <File FileName="appWeb/assets/js/usuarios.js" Line="18" Column="45" />
-      <File FileName="appWeb/Default.aspx" Line="57" Column="53" />
-      <File FileName="appWeb/Entidades/UsuarioOperaciones.cs" Line="40" Column="51" />
-      <File FileName="appWeb/Entidades/Usuario.cs" Line="27" Column="32" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
@@ -17,12 +8,12 @@
             <Node name="assets" expanded="True">
               <Node name="js" expanded="True" />
             </Node>
-            <Node name="Entidades" expanded="True">
-              <Node name="UsuarioOperaciones.cs" selected="True" />
-            </Node>
+            <Node name="conexiones" expanded="True" />
+            <Node name="Entidades" expanded="True" />
             <Node name="webservices" expanded="True">
               <Node name="webservice.asmx" expanded="True" />
             </Node>
+            <Node name="Default.aspx" selected="True" />
           </Node>
         </State>
       </Pad>

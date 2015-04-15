@@ -35,7 +35,6 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="Default.aspx">Registro</a></li>
             <li><a href="Usuarios.html">Usuarios</a></li>
-            <li><a href="#contact">Ciudad</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
